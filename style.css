@@ -1,0 +1,84 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 25px;
+}
+
+.logo {
+    width: 110px;
+}
+ 
+nav {  
+    float: right;
+       
+}
+
+a {
+    color: rgb(43, 30, 141);
+    text-decoration: none;
+}
+
+#navHeader a{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin-right: 5px;    
+    transition: all 0.25s;
+}
+
+#navHeader a:hover {
+    background-color: rgb(43, 30, 141);
+    color: white;
+}
+
+#navHeader {
+    position: relative;
+    top: 50px;   
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+article {
+    border: 3px solid black;
+    padding: 5px 5px;
+}
+
+article h2 {
+    background-color: rgb(43, 30, 141);
+    color: white;
+    height: 35px;
+    padding: 5px 5px;    
+}
+
+article p {
+    padding: 0px 10px;
+}
+
+footer {
+    height: 100px;    
+}
+
+#navFooter a{   
+    position: relative;
+    top: 15px;
+    padding: 0px 5px;
+    margin-right: 5px;    
+    transition: all 0.25s;
+}
+
+#navFooter a:hover {
+    background-color: rgb(43, 30, 141);
+    border-radius: 5px;
+    color: white;
+}
+
+footer p {
+    position: relative;       
+     float: right;
+     margin-left: 720px;
+     margin-top: 60px; 
+    }
