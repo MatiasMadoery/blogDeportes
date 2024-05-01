@@ -34,6 +34,53 @@ a {
     top: 50px;   
 }
 
+.menuHambur {
+    float: right;
+    width: 30px;    
+    aspect-ratio: 1/1;
+    display: none; 
+    background-image: url(imagenes/iconoHamb.webp); 
+    background-size: contain;
+    margin-top: 40px;     
+}
+
+.navHamburCerrado {
+    display: none;
+}
+
+#navHambur {
+    width: 120px;         
+    margin-top: 80px;  
+    background-color: white; 
+    padding: 30px 30px; 
+}
+
+#navHambur a {
+    background-color: rgb(43, 30, 141);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    width: 90px; 
+    display: block; 
+    transition: all 0.25s;       
+}
+
+#navHambur a:hover{
+    color:  rgb(43, 30, 141);
+    background-color: white;
+    border: 1px solid black;
+}
+
+@media(max-width: 600px) {
+    #navHeader {
+        display: none;
+    }
+    #botonMenu {
+        display: block;
+    }
+}
+
 .contenedor {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -57,6 +104,12 @@ article p {
     padding: 0px 10px;
 }
 
+@media(max-width: 600px) {
+    .contenedor {
+        display: block;
+    }
+}
+
 footer {
     height: 100px;    
 }
@@ -73,11 +126,19 @@ footer {
     background-color: rgb(43, 30, 141);
     border-radius: 5px;
     color: white;
+    padding: 5px 5px;
 }
 
 footer p {
     position: relative;       
      float: right;
      margin-left: 720px;
-     margin-top: 60px; 
+     margin-top: 60px;
+     font-size: smaller; 
+    }
+
+    @media(max-width: 600px) {
+        footer p {
+            margin-left: 100px;
+        }
     }
