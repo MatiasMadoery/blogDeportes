@@ -9,46 +9,50 @@
 <body>
     <header>
         <img class="logo" src="imagenes/Fox_Sports_logo1.svg" alt="logo">
+        <div class="contenedorBuscador">
+            <input id="parametro" onkeyup="Buscar()" type="text" placeholder="Ingrese un deporte">
+            <button id="botonBuscar" onclick="Buscar()">Buscar</button>
+        </div>
         <nav id="navHeader">
-            <a href="">Futbol</a>
-            <a href="">Rugby</a>
-            <a href="">Basquet</a>
-            <a href="">Hockey</a>
+            <a href="#futbol">Futbol</a>
+            <a href="#rugby">Rugby</a>
+            <a href="#basquet">Basquet</a>
+            <a href="#hockey">Hockey</a>
             <a href="#contacto">Contacto</a>
         </nav>
         <div class="menuHambur" id="botonMenu" onclick="DesplegarMenuHam()"></div>
         <nav id="navHambur" class="navHamburCerrado">
-            <a href="">Futbol</a>
-            <a href="">Rugby</a>
-            <a href="">Hockey</a>
+            <a href="#futbol">Futbol</a>
+            <a href="#rugby">Rugby</a>
+            <a href="#basquet">Hockey</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
     <hr>
-    <div class="contenedor">
+    <div class="contenedor" id="contenedor">
         <section>
-            <h1>Futbol</h1>
+            <h1 id="futbol">Futbol</h1>
             <article>
                 <h2>Titulo de articulo</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, officiis voluptatibus aspernatur quos molestiae quam. Corporis illo, quae perspiciatis repudiandae nemo eos architecto assumenda dolores odit, dolore eveniet provident atque.</p>                
             </article>
         </section>
         <section>
-            <h1>Rugby</h1>
+            <h1 id="rugby">Rugby</h1>
             <article>
                 <h2>Titulo del articulo</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam temporibus non natus minus sed, dolores pariatur rem doloribus placeat laborum architecto aspernatur! Incidunt blanditiis nulla ex voluptas eos officia nesciunt?</p>
             </article>
         </section>
         <section>
-            <h1>Basquet</h1>
+            <h1 id="basquet">Basquet</h1>
             <article>
                 <h2>Titulo del articulo</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, quasi! Ad ab architecto minima eligendi impedit tempore repudiandae, quia at, a consequuntur modi, reprehenderit dicta repellendus expedita natus eaque praesentium.</p>
             </article>
         </section>
         <section>
-            <h1>Hockey</h1>
+            <h1 id="hockey">Hockey</h1>
             <article>
                 <h2>Titulo de articulo</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut laborum necessitatibus distinctio maxime dolorum cupiditate quibusdam architecto. Sunt amet accusantium inventore delectus esse commodi nesciunt, nobis a reiciendis deserunt eveniet.</p>
@@ -62,7 +66,9 @@
             <a href="">Terminos y condiciones</a>
             <a id="contacto" href="">Contacto</a>
         </nav>
-        <p><i> Copyright FOXSPORTS Srl Argentina.</i><p>
+        <div id="pFooter">
+            <p><i> Copyright FOXSPORTS Srl Argentina.</i><p></p>
+        </div>        
     </footer>
     <script src="script.js"></script>
 </body>

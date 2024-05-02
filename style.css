@@ -6,6 +6,19 @@ body {
 .logo {
     width: 110px;
 }
+
+.contenedorBuscador {     
+    float: right;    
+    height: 0px;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+#botonBuscar {
+    background-color: rgb(43, 30, 141);
+    color: white;
+    border-radius: 5px;
+}
  
 nav {  
     float: right;       
@@ -49,8 +62,8 @@ a {
 }
 
 #navHambur {
-    width: 120px;         
-    margin-top: 80px;  
+    width: 120px;                
+    margin-top: 80px;     
     background-color: white; 
     padding: 30px 30px; 
 }
