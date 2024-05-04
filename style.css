@@ -85,6 +85,12 @@ a {
     border: 1px solid black;
 }
 
+@media(min-width: 600px) {
+    #navHambur{
+        display: none;
+    }
+}
+
 @media(max-width: 600px) {
     #navHeader {
         display: none;
@@ -124,6 +130,7 @@ article p {
 }
 
 footer {
+    position: relative;
     height: 100px;    
 }
 
@@ -142,16 +149,11 @@ footer {
     padding: 5px 5px;
 }
 
-footer p {
-    position: relative;       
-     float: right;
-     margin-left: 720px;
-     margin-top: 60px;
-     font-size: smaller; 
-    }
+#pFooter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: smaller;
+}
 
-    @media(max-width: 600px) {
-        footer p {
-            margin-left: 100px;
-        }
-    }
+ 

@@ -16,30 +16,19 @@ function DesplegarMenuHam()
 }
 
 function Buscar() {
-    let input = document.getElementById("parametro");
-    input.value = input.value.toLowerCase();
-
-    let contenedor = document.getElementById("contenedor");
-
-    let hijos = contenedor.childNodes;
-
-    let hayResultado = false;
-
-    for (let i = 0; i < hijos.length; i++)
-    {
-        console.log(hijos[i].innerHTML);        
-
-        if (hijos[i].tagName == 'H1')
-        {
-            if (hijos[i].innerHTML.toLowerCase().indexOf(input.value) > -1)
-            {
-                hayResultado = true;
-                hijos[i].removeAttribute('style');
+    let entrada = document.getElementById("parametro");
+    let terminoBuscado = entrada.value.toLowerCase();
+    
+    let secciones = document.querySelectorAll("#contenedor section");
+    
+    secciones.forEach(seccion => {
+        let titulo = seccion.querySelector("h1");
+        if (titulo) {
+            if (titulo.textContent.toLowerCase().includes(terminoBuscado)) {
+                seccion.removeAttribute('style');
+            } else {
+                seccion.setAttribute('style', 'display: none');
             }
-            else
-            {
-                hijos[i].setAttribute('style', 'display: none');
-            }            
-        }        
-    }
+        }
+    });
 }

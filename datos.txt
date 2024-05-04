@@ -1,0 +1,28 @@
+function Buscar() {
+    let entrada = document.getElementById("parametro");
+    let terminoBuscado = entrada.value.toLowerCase();
+    
+    let secciones = document.querySelectorAll("#contenedor section");
+    
+    secciones.forEach(seccion => {
+        let titulo = seccion.querySelector("h1");
+        if (titulo) {
+            if (title.textContent.toLowerCase().includes(terminoBuscado)) {
+                seccion.removeAttribute('style');
+            } else {
+                seccion.setAttribute('style', 'display: none');
+            }
+        }
+    });
+}
+-secciones es una NodeList que contiene todos los elementos <section> dentro del contenedor con el ID "contenedor".
+-seccion => { ... } es una función de flecha que se ejecuta para cada elemento en sections. 
+Dentro de esta función, section representa el elemento <section> actual en la iteración.
+-let titulo = seccion.querySelector("h1"); busca un elemento <h1> dentro del elemento <section> actual.
+Esto se hace para encontrar el título dentro de cada sección.
+-if (titulo) { ... } verifica si se encontró un título <h1>. 
+Si no se encuentra, significa que no hay título en esa sección y no es necesario realizar ninguna acción.
+-titulo.textContent.toLowerCase().includes(terminoBuscado) verifica si el texto del título (en minúsculas),
+incluye el término de búsqueda ingresado en el campo de entrada. Si es así, la sección se muestra; de lo contrario, se oculta.
+-seccion.removeAttribute('style') elimina cualquier estilo aplicado previamente a la sección, lo que hará que se muestre.
+-seccion.setAttribute('style', 'display: none') establece un estilo en línea en la sección para ocultarla.
